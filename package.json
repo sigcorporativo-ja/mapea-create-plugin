@@ -1,0 +1,34 @@
+{
+  "name": "mapea-create-plugin",
+  "author": "SIGCorporativo Junta de Andalucía",
+  "version": "1.0.0",
+  "description": "CLI tool to generate Mapea plugins",
+  "keywords": [
+    "map",
+    "mapping",
+    "tool",
+    "plugin",
+    "sigcorporativo-ja",
+    "junta",
+    "andalucía",
+    "mapea"
+  ],
+  "homepage": "http://sigcorporativo-ja.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sigcorporativo-ja/mapea-create-plugin.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sigcorporativo-ja/mapea-create-plugin/issues"
+  },
+  "bin": {
+    "mapea-create-plugin": "compile-utils/tasks/index.js"
+  },
+  "dependencies": {
+    "inquirer": "^6.3.1",
+    "chalk": "^2.4.2",
+    "fs-extra": "^5.0.0",
+    "handlebars": "^4.1.2"
+  }
+}
