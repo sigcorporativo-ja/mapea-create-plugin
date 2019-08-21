@@ -1,5 +1,5 @@
 # mapea-create-plugin
-[![npm version](https://badge.fury.io/js/mapea-create-plugin.svg)](https://badge.fury.io/js/mapea-create-plugin)
+[![npm version](https://badge.fury.io/js/mapea-create-plugin.svg)](https://www.npmjs.com/package/mapea-create-plugin)
 
 Herramienta para el desarrollo de plugins en [Mapea](https://github.com/sigcorporativo-ja/Mapea4)
 
