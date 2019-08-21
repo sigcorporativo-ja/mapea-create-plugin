@@ -6,13 +6,13 @@ Herramienta para el desarrollo de plugins en [Mapea](https://github.com/sigcorpo
 **Requisitos e instalación de dependencias**
 
 * Node.js (version >=8.x.x)
-# Instalación de la herramienta
+## Instalación de la herramienta
 Realizamos la instalación de forma global para disponer de la herramienta en cualquier parte de nuestro equipo:
 
 ```shell
 $ npm install -g mapea-create-plugin
 ```
-# Creación de plugins
+## Creación de plugins
 **1. Creación de plugin base**  
 Tarea que crea la estructura para un nuevo plugin:  
 ```shell
