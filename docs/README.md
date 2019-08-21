@@ -68,6 +68,5 @@ npm run test-build
 Esto levantará un http-server que consumirá los recursos generados en build, simulando un servidor den producción. El código adcional que queramos ejecutar, tendremos que escribirlo en '_prod.html_' en la carpeta '_src/tests_'.
 > :point_right: Importante haber hecho antes `npm run build` o no tendremos creada la compilación del plugin, que es donde apunta
 
-> :point_right: Todos los comandos que se indican, salvo la creación del plugin, deben hacerse a nivel de '_plugins/miplugin_'
 
 ![mapea-create-plugin](./images/mapea-create-plugin_nuevo.gif)
