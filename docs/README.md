@@ -1,5 +1,5 @@
 # mapea-create-plugin
-[![npm version](https://badge.fury.io/js/mapea-create-plugin.svg)](https://www.npmjs.com/package/mapea-create-plugin)
+[![npm version](https://img.shields.io/npm/v/mapea-create-plugin.svg)](https://www.npmjs.com/package/mapea-create-plugin)
 
 Herramienta para el desarrollo de plugins en [Mapea](https://github.com/sigcorporativo-ja/Mapea4)
 
@@ -24,7 +24,7 @@ Solicitará el nombre del plugin, así como la versión de Mapea sobre la que se
 Creará la estructura de directorios y los ficheros necesarios para la construcción de un plugin dentro de una carpeta con el nombre '_miplugin_' en el lugar donde se haya ejecutado la herramienta. 
 Este plugin es autocontenido y ya contiene los scripts de pruebas y compilación, e incluye una funcionalidad básica de ejemplo 'Hola mundo'.
 
-En este punto, **deberemos desarrollar la funcionalidad específica de nuestro plugin**. Para ello, la [guía de desarrollo](https://github.com/sigcorporativo-ja/Mapea4-dev/wiki) entra en detalle acerca de los métodos que lo forman y qué debe incluir cada uno.
+En este punto, **deberemos desarrollar la funcionalidad específica de nuestro plugin**. Para ello, la [guía de desarrollo](https://github.com/sigcorporativo-ja/Mapea4-dev-webpack/wiki) entra en detalle acerca de los métodos que lo forman y qué debe incluir cada uno.
 Si es necesaria la instalación de alguna dependencia (p.e. _lodash_), puede realizarse de forma habitual, ejecutando dentro del directorio del plugin el siguiente comando:
 ```shell
 $ npm install --save lodash
