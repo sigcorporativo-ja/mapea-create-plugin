@@ -38,6 +38,13 @@ export default class {{archetype.plugin.name}} extends M.Plugin {
      * @type {Object}
      */
     this.metadata_ = api.metadata;
+
+    /**
+     * Name
+     * @public
+     * @type {string}
+     */
+    this.name = '{{archetype.plugin.name}}';
   }
 
   /**
@@ -58,6 +65,9 @@ export default class {{archetype.plugin.name}} extends M.Plugin {
       collapsedButtonClass: 'g-cartografia-flecha-izquierda',
     });
     this.panel_.addControls(this.controls_);
+    this.panel_.on(M.evt.ADDED_TO_MAP, () => {
+      this.fire(M.evt.ADDED_TO_MAP);
+    });
     map.addPanels(this.panel_);
   }
 
@@ -71,4 +81,5 @@ export default class {{archetype.plugin.name}} extends M.Plugin {
   getMetadata(){
     return this.metadata_;
   }
+
 }
