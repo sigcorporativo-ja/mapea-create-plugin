@@ -40,7 +40,7 @@ const ASK_PLUGIN_NAME = ' What is the name of your plugin?: '
  * @const
  */
 const ASK_MAPEA_VERSION = ' Choose Mapea version: '
-const MAPEA_VERSIONS = ['6.3.0','6.2.0']
+const MAPEA_VERSIONS = ['6.3.1','6.2.0']
 
 /**
  * Override plugin question
@@ -312,6 +312,9 @@ const main = async () => {
     path.join(destDir, 'test', 'test.js'),
     path.join(destDir, 'test', 'dev.html'),
     path.join(destDir, 'test', 'prod.html'),
+    path.join(destDir, 'src', 'config','config.dev.js'),
+    path.join(destDir, 'src', 'config','config.pro.js'),
+    path.join(destDir, '.eslintrc')
   ]
 
   const existDir = fs.existsSync(destDir)

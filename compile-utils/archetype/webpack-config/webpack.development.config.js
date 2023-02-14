@@ -1,9 +1,21 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+module.exports = (env) => {
+  const entry = [];
+  if(env)
+  {
+    console.log('Construyendo para configuración: ', env); // 'local'
+    entry.push(path.resolve(__dirname, '../src/config/config.' + env + '.js'));
+  } else {
+    console.log('Construyendo sin configuración de entorno');
+  }
+
+  entry.push(path.resolve(__dirname, '..', 'test', 'test.js'));
+
+  return {
   mode: 'development',
-  entry: path.resolve(__dirname, '..', 'test', 'test.js'),
+  entry: entry,
   resolve: {
     alias: {
       templates: path.resolve(__dirname, '../src/templates'),
@@ -59,4 +71,5 @@ module.exports = {
     },
   },
   devtool: 'eval-source-map',
+}
 };

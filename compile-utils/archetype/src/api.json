@@ -33,6 +33,7 @@
       "plugins": [{ "uuid": "", "name": "" }],
       "services": [{ "name": "", "description": "" }]
     },
-    "compatibility": ["{{archetype.plugin.mapea.version}}"]
+    "compatibility": ["{{archetype.plugin.mapea.version}}"],
+    "centralized": "false"
   }
 }

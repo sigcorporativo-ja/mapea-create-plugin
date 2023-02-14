@@ -22,7 +22,8 @@
     "XMLHttpRequest": true,
     "Image": true,
     "Draggabilly": true,
-    "XMLSerializer": true
+    "XMLSerializer": true,
+    "{{archetype.plugin.name}}config": true
   },
   "rules": {
     "import/no-absolute-path": "off",

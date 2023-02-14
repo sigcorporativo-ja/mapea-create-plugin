@@ -8,10 +8,22 @@ const CopywebpackPlugin = require('copy-webpack-plugin');
 const PJSON_PATH = path.resolve(__dirname, '..', 'package.json');
 const pjson = require(PJSON_PATH);
 
-module.exports = {
+module.exports = (env) => {
+  const entry = [];
+  if(env)
+  {
+    console.log('Compilando para configuración: ', env);
+    entry.push(path.resolve(__dirname, '../src/config/config.' + env + '.js'));
+  } else {
+    console.log('Compilando sin configuración de entorno');
+  }
+
+  entry.push(path.resolve(__dirname, '..', 'src', 'index.js'));
+
+  return {
   mode: 'production',
   entry: {
-    '{{archetype.plugin.id}}.ol.min': path.resolve(__dirname, '..', 'src', 'index.js'),
+    '{{archetype.plugin.id}}.ol.min': entry,
   },
   output: {
     path: path.resolve(__dirname, '..', 'dist'),
@@ -87,4 +99,5 @@ module.exports = {
     }]),
   ],
   devtool: 'source-map',
+}
 };

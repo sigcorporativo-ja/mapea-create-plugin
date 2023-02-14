@@ -44,6 +44,19 @@ http://localhost:6123
 ```  
 Y se nos abrirá la página _'dev.html'_.
 
+La estructura del plugin creado contendrá una carpeta '/src/config' con dos ficheros de ejemplo que contienen una constante donde pueden definirse valores de configuración. El uso de esta configuración es opcional y alternativa a la parametrización del propio plugin. En caso de utilizarla, se puede lanzar la prueba contra uno de esos ficheros de configuración, para utilizar los valores que defina internamente:  
+```shell
+npm start -- --env $id_config
+```  
+Donde $id_config es el valor de la extensión del fichero previa al .js. Por ejemplo:  
+```shell
+// para usar el fichero config.dev.js
+npm start -- --env dev
+// para usar el fichero config.pro.js
+npm start -- --env pro
+```  
+Lanzado así, desde cualquier parte de la lógica del plugin se podrá acceder al objeto de configuración definido, que por defecto se llama $nombrepluginconfig.  El programador puede crear tantos ficheros de configuración como necesite.
+
 
 **2.- Check plugin**  
 Tarea para validar código con [ESLint](https://eslint.org/):
@@ -61,7 +74,12 @@ Compila y minimiza los plugins creados. Aunque el plugin está compuesto por var
 ```shell
 $  npm run build
 ```
-Se generará en la carpeta 'build/miplugin' los ficheros _css_ y _js_ comprimidos finales.
+Se generará en la carpeta 'build/miplugin' los ficheros _css_ y _js_ comprimidos finales.  
+
+Si se han usado para el desarrollo ficheros de configuración opcionales alternativos a la parametrización del plugin tal como se ha descrito con anterioridad, se debe especificar el fichero a utilizar para la compilación:  
+```shell
+$  npm run build -- --env $id_config
+```
 
 En caso de que queramos testear en modo producción solo tendremos que hacer:
 ```shell
