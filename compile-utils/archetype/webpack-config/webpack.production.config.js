@@ -39,16 +39,7 @@ module.exports = (env) => {
     extensions: ['.wasm', '.mjs', '.js', '.json', '.css', '.hbs', '.html'],
   },
   module: {
-    rules: [{
-        test: /\.js$/,
-        exclude: /(node_modules\/(?!ol)|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
+    rules: [
       {
         test: /\.js$/,
         loader: 'eslint-loader',

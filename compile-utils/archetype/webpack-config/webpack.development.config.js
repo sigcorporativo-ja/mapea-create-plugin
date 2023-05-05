@@ -29,16 +29,6 @@ module.exports = (env) => {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules\/(?!ol)|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-      {
-        test: /\.js$/,
         loader: 'eslint-loader',
         exclude: [/node_modules/, /lib/, /test/, /dist/],
       },
