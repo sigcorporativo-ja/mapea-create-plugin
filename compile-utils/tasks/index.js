@@ -40,7 +40,7 @@ const ASK_PLUGIN_NAME = ' What is the name of your plugin?: '
  * @const
  */
 const ASK_MAPEA_VERSION = ' Choose Mapea version: '
-const MAPEA_VERSIONS = ['6.3.1','6.2.0']
+const MAPEA_VERSIONS = ['6.4.0','6.3.1']
 
 /**
  * Override plugin question
